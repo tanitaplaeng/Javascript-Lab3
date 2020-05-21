@@ -39,6 +39,7 @@ function editSubmission(array, index, score) {
 function findSubmissionByName(array, name) {
     // return the object in the array that has the provided name 
     // use find method
+    return array.find(array => array.name === name);
 }
 
 function findLowestScore(array) { 
@@ -59,18 +60,32 @@ function findLowestScore(array) {
 
 function findAverageScore(array) {
     // use for of loop to return average quiz score
-    for(const scores of array);
-    
+    let arraySize = array.length;
+    // getting how many objects are in the array
+    let total = 0;
+    // setting the total to 0
+    for (const item of array) {
+        total = item.score + total
+        // setting new total to total plus score 
+        // loops through the whole array to add previous score to next score
+    }
+    return total / arraySize;
+    // returning sum of the total and divide by number of objects (the array length)
     
 }
 function filterPassing(array) { 
     // return a new array using the filter method
     // filer method should find objects in the array that have passing scores
+    let newArray = array.filter(item => item.passing === true);
+    // holds every object that has a passing of true
+    return newArray;
 }
 
 function filter90AndAbove(array) { 
     //return a new array using the filter method
     // filter method should find objects in the array that have high scores greater than or equal to 90
+    let newArray = array.filter(item => item.score >= 90);
+    return newArray;
 }
 
 
@@ -91,7 +106,12 @@ editSubmission(submissions, 2, 70);
 console.log(submissions);
 // edits Jolene's score
 
+console.log(findSubmissionByName(submissions, 'Jolene'));
+
 console.log(findLowestScore(submissions));
 // John has the lowest score
 
+console.log(findAverageScore(submissions));
+
+console.log(filter90AndAbove(submissions));
 

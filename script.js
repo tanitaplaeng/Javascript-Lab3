@@ -31,7 +31,9 @@ function editSubmission(array, index, score) {
     // update objects score at the specified index
 // use conditional statements to set the value for passed property to true if the score is greater or equal to 60, and false otherwise
     array[index].score = score;
+    // the objects score is equal to score being called
     array[index].passed = score >= 60;
+    // if that score is greater than 60, it is passed as true
 }
 
 function findSubmissionByName(array, name) {
@@ -57,6 +59,9 @@ function findLowestScore(array) {
 
 function findAverageScore(array) {
     // use for of loop to return average quiz score
+    for(const scores of array);
+    
+    
 }
 function filterPassing(array) { 
     // return a new array using the filter method
@@ -71,7 +76,7 @@ function filter90AndAbove(array) {
 
 
 addSubmission(submissions, 'Jolene', 99, '2019-10-31');
-addSubmission(submissions, 'John', 39, '2018-03-19');
+addSubmission(submissions, 'June', 39, '2018-03-19');
 console.log(submissions);
 
 deleteSubmissionByIndex(submissions, 3);

@@ -89,7 +89,6 @@ function filter90AndAbove(array) {
 }
 
 
-
 addSubmission(submissions, 'Jolene', 99, '2019-10-31');
 addSubmission(submissions, 'June', 39, '2018-03-19');
 console.log(submissions);
@@ -114,4 +113,3 @@ console.log(findLowestScore(submissions));
 console.log(findAverageScore(submissions));
 
 console.log(filter90AndAbove(submissions));
-
